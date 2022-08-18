@@ -1,16 +1,13 @@
 
 const knex = require('../db/conexion'); 
 
-
-
 const inicio = (req, res) => {
     res.render('home');
 }
 
-
 const mostrarProductos = (req, res) => {
     knex.select('*').from('vinos').then(vinos => {
-        console.log(vinos);
+        //console.log(vinos);
         res.render('productos', {vinos});
     });
     }
@@ -18,7 +15,6 @@ const mostrarProductos = (req, res) => {
 const formcargarProductos = (req, res) => {
     res.render('formaddproductos');
 }
-
 
 
 const cargarProductos = (req, res) => {
@@ -33,25 +29,17 @@ const cargarProductos = (req, res) => {
         precioventa: req.body.precioventa,
 
         }
-       
       ], 
       ['id']
     )
     .into('vinos')
     .then(ids => {
-        console.log(ids);
+        //console.log(ids);
         res.redirect('/showproductos');
     }
     );
 }
 
-
-   
-
-
-      
-
-   
 module.exports = {
     inicio,
     cargarProductos,

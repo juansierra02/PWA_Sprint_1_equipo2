@@ -20,7 +20,7 @@ const cargarProductos = (req, res) => {
     )
     .into('vinos')
     .then(ids => {
-        console.log(ids);
+        //console.log(ids);
         res.redirect('/showproductos');
     }
     );
@@ -31,7 +31,7 @@ const knex = require('../db/conexion');
 
 const mostrarProductos = (req, res) => {
     knex.select('*').from('vinos').then(vinos => {
-        console.log(vinos);
+        //console.log(vinos);
         res.render('productos', {vinos});
     });
     }
