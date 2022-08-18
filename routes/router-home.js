@@ -2,9 +2,9 @@ const {Router} = require('express');
 const router = Router();
 const {
     inicio,
-cargarProductos,
-formcargarProductos,
-mostrarProductos,
+    cargarProductos,
+    formcargarProductos,
+    mostrarProductos,
 } = require('../controllers/controller-home');
 
 

@@ -34,9 +34,9 @@ const mostrarProductos = (req, res) => {
         //console.log(vinos);
         res.render('productos', {vinos});
     });
-    }
+  }
 
 
-    module.exports = {mostrarProductos};
+module.exports = {mostrarProductos};
 
 module.exports = {cargarProductos};

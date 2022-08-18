@@ -27,7 +27,6 @@ const cargarProductos = (req, res) => {
         stock: req.body.stock,
         costo: req.body.costo,
         precioventa: req.body.precioventa,
-
         }
       ], 
       ['id']
