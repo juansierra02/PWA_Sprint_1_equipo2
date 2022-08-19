@@ -6,6 +6,23 @@ var logger = require('morgan');
 const dotenv = require('dotenv');
 dotenv.config();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var indexRouter = require('./routes/router-home');
 
 var app = express();
@@ -26,6 +43,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -38,3 +56,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
