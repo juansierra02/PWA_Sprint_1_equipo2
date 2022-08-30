@@ -1,0 +1,25 @@
+{
+  "name": "vinos",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "express": "~4.16.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.5.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19"
+  },
+  "description": "primer spring grupo2 utn",
+  "main": "app",
+  "repository": "https://github.com/rubenmontes58/spring-vinos.git",
+  "author": "RUBEN MONTES <rubenmontes58@gmail.com>",
+  "license": "MIT"
+}

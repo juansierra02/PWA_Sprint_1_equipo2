@@ -1,0 +1,75 @@
+{{{navbar}}}
+<div class="container">
+    <h3 class="h3centrado">NUESTROS PRODUCTOS</h3>
+    <div>
+        <img class="aligncenter size-full wp-image-663" src="../images/border-title.png" alt="" width="224" height="21">
+        <br>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Producto</th>
+                <th scope="col">tipo</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Costo</th>
+                <th scope="col">Precio de Venta</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each vinos}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{producto}}</td>
+                <td>{{tipo}}</td>
+                <td>{{descripcion}}</td>
+                <td>{{stock}}</td>
+                <td>{{costo}}</td>
+                <td>{{precioventa}}</td>
+                <td>
+                    <a href="/productos/{{id}}" class="btn btn-primary">Editar</a></button>
+
+                    
+                </td>
+
+
+           
+                 
+               
+
+                    
+                    
+            </tr>
+            {{/each}}
+    </table>
+</div>
+
+
+<script>
+    <script>
+
+
+const btnEliminar = document.querySelector('.btn-danger')
+  btnEliminar.addEventListener('click', async() => {
+    console.log(btnEliminar.dataset.id)  
+    try {
+        
+        const data = await fetch(`/productos/${btnEliminar.dataset.id}`, {
+          method: 'delete'
+        })
+        const res = await data.json()
+        console.log(res)
+        if(res.estado){
+            window.location.href = '/productos'
+        }else{
+            console.log(res)
+        }
+    } catch (error) {
+        console.log(error)
+    }
+  })
+
+</script>
+</script>
